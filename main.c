@@ -1,22 +1,31 @@
 #include "main.h"
-
 /**
- * main - write a simple shell, a UNIX command line interpreter
- *
- * Return: 0 
+ * main - an attempt to mimic UNIX shell program
+ * @argc: arg 1
+ * @argv: arg 2
+ * Return: 0 on success, -1 on error
  */
-
-int main(int ac, char **argv)
+int main(int argc, char **argv)
 {
-	char *prompt;
-	char *lineptr;
-	size_t n = 0;
+	(void)argc;
+	(void)argv;
 
-	prompt = "Shell$";
+	ssize_t numCharsRead;
+	char *prompt = "$ ";
+	char *linePointer = NULL, *linePointerCP = NULL;
+	size_t lineSize = 0;
 
-	printf ("%s", prompt);
-	getline(&lineptr, &n, stdin);
+	while (true)
+	{
+		printf("%s", prompt);
+		numCharsRead = getline(&linePointer, &lineSize, stdin);
 
-	free(lineptr);
+		if (numCharsRead == -1)
+		{
+			printf("Exiting...\n");
+			return (-1);
+		}
+		printf("%s\n", linePointer), free(linePointer);
+	}
 	return (0);
 }
