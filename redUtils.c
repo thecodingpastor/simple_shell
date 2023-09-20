@@ -42,6 +42,7 @@ void greaterThanMode(int argc, char *argv[], int i)
 	}
 	else
 		handleError("Missing output file.\n", 1);
+}
 /**
  * greater2Mode - handles "2>" redirection
  * @argc: argc

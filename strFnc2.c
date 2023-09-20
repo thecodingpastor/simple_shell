@@ -1,3 +1,4 @@
+#include "shelly.h"
 /**
  * _strchr - locates a character in a string.
  * @str: arg 1

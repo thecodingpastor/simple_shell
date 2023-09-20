@@ -1,3 +1,4 @@
+#include "shelly.h"
 /**
  * main - mimics simple shell
  * @argc: arg count
@@ -12,7 +13,7 @@ int main(int argc, char *argv[], char *envp[])
 	ssize_t read;
 	int count = 0;
 
-	signal(SIGINT, handleCtrlCSignal);
+	//signal(SIGINT, handleCtrlCSignal);
 
 	while (true)
 	{
