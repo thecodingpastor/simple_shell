@@ -35,6 +35,12 @@ int _strcmp(char *s1, char *s2)
 	return (0);
 }
 
+/**
+ * _atoi - mimics standard atoi
+ * @str: string to work on
+ * Return: integer
+*/
+
 int _atoi(char *str)
 {
 	int result = 0, sign = 1, i = 0;
@@ -50,6 +56,16 @@ int _atoi(char *str)
 
 	return (result * sign);
 }
+
+/**
+ * _strcat - appends the src string to the dest string
+ * overwriting the terminating null byte (\0)
+ * at the end of dest, and then adds a terminating null byte
+ * @dest: firsdt string to concat
+ * @src: second striong to concat
+ *
+ * Return: a pointer to the resulting string dest
+ */
 
 char *_strcat(char *dest, char *src)
 {
