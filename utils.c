@@ -56,6 +56,8 @@ size_t splitToTokens(char *ms_cmd, char *argv[], char *ms_delim)
  */
 void handleCtrlCSignal(int sig)
 {
+	bool ctrlCPressed = false;
+
 	if (ctrlCPressed)
 	{
 		printString("\nCTRL+C pressed again. Going...\n");
