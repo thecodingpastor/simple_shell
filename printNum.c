@@ -26,5 +26,6 @@ int printNum(int num)
 		}
 		for (int i = index - 1; i >= 0; i--)
 			_putchar(buffer[i]);
+	}
 	return (digits);
 }

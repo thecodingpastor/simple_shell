@@ -12,6 +12,7 @@
 #define INITIAL_BUFFER_SIZE 128
 #define MAX_PATH_LENGTH 4096
 
+int _putchar(char c);
 void prompt(void);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
 void handleError(char *msg, bool exitApp);
