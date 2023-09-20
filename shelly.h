@@ -9,10 +9,8 @@
 #include <sys/wait.h>
 #include <fcntl.h>
 #include <signal.h>
-
-// #define MAX_INPUT_SIZE 1024
-// #define STR_LEN 300
 #define INITIAL_BUFFER_SIZE 128
+#define MAX_PATH_LENGTH 4096
 
 void prompt(void);
 ssize_t _getline(char **lineptr, size_t *n, FILE *stream);
@@ -34,6 +32,7 @@ int _atoi(char *str);
 char *_strcat(char *dest, char *src);
 char *_strcpy(char *dest, char *src);
 char *_strchr(char *s, char c);
+char *_strtok(char *str, char *c);
 
 volatile bool ctrlCPressed = false;
 
