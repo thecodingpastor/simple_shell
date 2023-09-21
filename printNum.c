@@ -6,7 +6,7 @@
  */
 int printNum(int num)
 {
-	int digits = 0;
+	int digits = 0, i;
 
 	if (num < 0)
 		_putchar('-'), num = -num, digits++;
@@ -24,7 +24,7 @@ int printNum(int num)
 			buffer[index] = '0' + digit;
 			temp /= 10, index++, digits++;
 		}
-		for (int i = index - 1; i >= 0; i--)
+		for (i = index - 1; i >= 0; i--)
 			_putchar(buffer[i]);
 	}
 	return (digits);

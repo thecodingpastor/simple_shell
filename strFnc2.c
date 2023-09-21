@@ -39,9 +39,12 @@ int _putchar(char c)
 */
 char *_strtok(char *str, char *c)
 {
+	static char *ms_buff;
+	char *ms_token;
+	int i = 0, len = _strlen(c);
+
 	if (!c)
 		return (NULL);
-	static char *ms_buff;
 
 	if (str)
 		ms_buff = str;
@@ -49,8 +52,7 @@ char *_strtok(char *str, char *c)
 		if (!ms_buff || !*ms_buff)
 			return (NULL);
 
-	char *ms_token = ms_buff;
-	int i = 0, len = _strlen(c);
+	ms_token = ms_buff;
 
 	while (*ms_buff && i != len)
 	{

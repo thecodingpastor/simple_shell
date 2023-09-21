@@ -8,6 +8,9 @@
  */
 ssize_t _getline(char **linePointer, size_t *n, FILE *stream)
 {
+	int c;
+	size_t i = 0;
+
 	if (linePointer == NULL || n == NULL || stream == NULL)
 		return (-1);
 	if (*linePointer == NULL || *n == 0)
@@ -17,8 +20,6 @@ ssize_t _getline(char **linePointer, size_t *n, FILE *stream)
 		if (*linePointer == NULL)
 			return (-1);
 	}
-	int c;
-	size_t i = 0;
 
 	while ((c = fgetc(stream)) != EOF)
 	{

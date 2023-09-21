@@ -6,7 +6,7 @@
  */
 void redirection(int argc, char *argv[])
 {
-	int in_fd = -1, out_fd = -1, i;
+	int i;
 
 	for (i = 0; i < argc; i++)
 	{
