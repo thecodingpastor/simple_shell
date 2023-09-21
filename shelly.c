@@ -13,7 +13,7 @@ int main(int argc, char *argv[], char *envp[])
 	ssize_t read;
 	int count = 0;
 
-	(void) argc;
+	(void) argc, (void) argv;
 	while (true)
 	{
 		count++;
