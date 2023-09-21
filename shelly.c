@@ -12,7 +12,7 @@ int main(int argc, char *argv[], char *envp[])
 	size_t ms_lineSize = 0, input_argc = 0;
 	ssize_t read;
 	int count = 0;
-	
+
 	(void) argc, (void) argv;
 
 	while (true)
