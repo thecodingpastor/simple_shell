@@ -6,20 +6,14 @@
  * @envp: envp
  * Return: 0 or -1
  */
-int global_argc;
-char **global_argv;
-
 int main(int argc, char *argv[], char *envp[])
 {
+	char *ms_linePointer, *input_argv[100];
+	size_t ms_lineSize = 0, input_argc = 0;
 	ssize_t read;
-	size_t ms_lineSize = 0;
-	size_t input_argc = 0;
-	char *ms_linePointer;
-	char *input_argv[100];
 	int count = 0;
 
-	global_argc = argc;
-	global_argv = argv;
+	(void) argc, (void) argv;
 
 	while (true)
 	{
@@ -33,6 +27,7 @@ int main(int argc, char *argv[], char *envp[])
 
 		if (_strlen(ms_linePointer) == 0)
 			continue;
+
 		input_argc = splitToTokens(ms_linePointer, input_argv, " ");
 
 		execCommand(input_argc, input_argv, envp, count);
