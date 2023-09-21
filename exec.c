@@ -10,14 +10,16 @@
 ssize_t execCommand(int argc, char *argv[], char *envp[], int count)
 {
 	int status;
+	char *cmd = NULL;
+	pid_t pid;
 
 	if (argc < 1)
 		return (-1);
-	char *cmd = argv[0];
+	cmd = argv[0];
 
 	if (_strcmp(argv[0], "cd") == 0 || _strcmp(argv[0], "exit") == 0)
 		checkExitChangedir(argc, argv);
-	pid_t pid = fork();
+	pid = fork();
 
 	if (pid == 0)
 	{

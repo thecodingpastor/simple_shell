@@ -25,7 +25,6 @@ void lessThanMode(int argc, char *argv[], int i);
 void greaterThanMode(int argc, char *argv[], int i);
 void greater2Mode(int argc, char *argv[], int i);
 void checkExitChangedir(int argc, char *argv[]);
-void handleCtrlCSignal(int sig);
 int printNum(int num);
 int _strlen(char *s);
 int _strcmp(char *s1, char *s2);
