@@ -19,7 +19,7 @@ int main(int argc, char *argv[], char *envp[])
 	{
 		count++;
 		prompt();
-		read = _getline(&ms_linePointer, &ms_lineSize, stdin);
+		read = getline(&ms_linePointer, &ms_lineSize, stdin);
 
 		if (read == -1)
 			free(ms_linePointer), printString("\n"), exit(2);
