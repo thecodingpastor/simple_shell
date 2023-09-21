@@ -11,6 +11,8 @@
 #include <signal.h>
 #define INITIAL_BUFFER_SIZE 128
 #define MAX_PATH_LENGTH 4096
+extern int global_argc;
+extern char **global_argv;
 
 int _putchar(char c);
 void prompt(void);
